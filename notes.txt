@@ -1,0 +1,5 @@
+Menjalankan server nodemon
+nodemon bin/www
+
+Sequelize Migrate
+npx sequelize db:migrate
