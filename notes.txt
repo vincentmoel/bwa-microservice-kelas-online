@@ -1,5 +1,19 @@
+Membuat Express
+express --no-view service-user
+
+Melakukan "npm install" setelah membuat express
+
 Menjalankan server nodemon
 nodemon bin/www
 
 Sequelize Migrate
 npx sequelize db:migrate
+
+Install .env
+npm install dotenv
+
+Install Sequelize
+npm install sequelize sequelize-cli --save
+
+Melakukan init sequelize di project
+npx sequelize init
