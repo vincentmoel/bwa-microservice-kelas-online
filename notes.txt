@@ -6,14 +6,20 @@ Melakukan "npm install" setelah membuat express
 Menjalankan server nodemon
 nodemon bin/www
 
-Sequelize Migrate
-npx sequelize db:migrate
-
 Install .env
 npm install dotenv
 
 Install Sequelize
 npm install sequelize sequelize-cli --save
 
+Install mysql2
+npm install mysql2 --save
+
 Melakukan init sequelize di project
 npx sequelize init
+
+Membuat migration
+npx sequelize migration:create --name=create-table-users
+
+Sequelize Migrate
+npx sequelize db:migrate
