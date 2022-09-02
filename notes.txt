@@ -23,3 +23,12 @@ npx sequelize migration:create --name=create-table-users
 
 Sequelize Migrate
 npx sequelize db:migrate
+
+Membuat Seeder
+npx sequelize seed:create --name=user-seeders
+
+Menjalankan Seeder
+npx sequelize db:seed:all
+
+Install bcrypt
+npm install bcrypt --save
