@@ -32,3 +32,7 @@ npx sequelize db:seed:all
 
 Install bcrypt
 npm install bcrypt --save
+
+
+//Untuk User Service
+npm install fastest-validator --save
