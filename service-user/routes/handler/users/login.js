@@ -25,28 +25,36 @@ module.exports = async(req,res) => {
         }
     });
 
-    const isValidPassword = await bcrypt.compare(req.body.password, user.password);
-
-    if(!user || !isValidPassword)
+    if(!user)
     {
         return res.status(404).json({
             status: 'error',
             message: 'Login failed'
         });
     }
-    else
+
+    const isValidPassword = await bcrypt.compare(req.body.password, user.password);
+    
+    if(!isValidPassword)
     {
-        return res.json({
-            status: 'success',
-            data: {
-                id: user.id,
-                name: user.name,
-                email: user.email,
-                role: user.role,
-                avatar: user.avatar,
-                profession: user.profession,
-            }
+        return res.status(404).json({
+            status: 'error',
+            message: 'Login failed'
         });
     }
+
+
+
+    return res.json({
+        status: 'success',
+        data: {
+            id: user.id,
+            name: user.name,
+            email: user.email,
+            role: user.role,
+            avatar: user.avatar,
+            profession: user.profession,
+        }
+    });
 
 }
