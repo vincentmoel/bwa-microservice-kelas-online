@@ -34,5 +34,9 @@ Install bcrypt
 npm install bcrypt --save
 
 
-//Untuk User Service
+//Untuk User Service 
 npm install fastest-validator --save
+
+
+// install package jsonwebtoken
+npm install jsonwebtoken
